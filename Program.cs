@@ -16,11 +16,17 @@ namespace Calender
             Console.ReadLine();
             */
 
-            DateTime dateNow = DateTime.Now;
+            DateTime dateNow = DateTime.Now;    //現在の日時を取得する
+            //現在の年、月を画面に表示する
+            Console.Write("{0}年 {1}月\n", dateNow.Year, dateNow.Month);
+
+            //現在の年月の１日を取得する
+            DateTime dateFirst = DateTime.Parse(string.Format("{0}/{1}/1", dateNow.Year, dateNow.Month));
+            DisplayCalendar(dateFirst);
+            Console.ReadLine();
         }
 
-        //現在の年月の１日を取得する
-        //DateTime dateFirst = DateTime.Parse(string.Format("{0}/{1}/1")dateNow.Year, dateNow.Month));
+
 
         //1ヶ月のカレンダーを画面に表示する
         //パラメータ
